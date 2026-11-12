@@ -61,7 +61,7 @@ void setup() {
         Serial.printf("[EPS] Phiên bản phần cứng (IC Version): 0x%04X\n\n", version);
     } else {
         Serial.printf("[EPS] LỖI: Không tìm thấy MAX17048 tại địa chỉ 0x%02X (Mã lỗi: %d)!\n", MAX17048_ADDR, error);
-        Serial.println("[EPS] Vui lòng kiểm tra lại dây nối SDA (GPIO 21), SCL (GPIO 22) và nguồn cấp.");
+    
     }
 }
 
