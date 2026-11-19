@@ -46,7 +46,7 @@ void setup() {
     Serial.begin(115200);
     while (!Serial) { delay(10); }
 
-        Serial.println("[EXAMPLE 2-1a] ĐO ĐIỆN ÁP & PHẦN TRĂM PIN VỚI MAX17048 (I2C)");
+    Serial.println("[EXAMPLE 2-1a] ĐO ĐIỆN ÁP & PHẦN TRĂM PIN VỚI MAX17048 (I2C)");
     
     // Khởi tạo bus I2C (mặc định SDA=GPIO21, SCL=GPIO22 trên ESP32)
     Wire.begin();
@@ -61,7 +61,6 @@ void setup() {
         Serial.printf("[EPS] Phiên bản phần cứng (IC Version): 0x%04X\n\n", version);
     } else {
         Serial.printf("[EPS] LỖI: Không tìm thấy MAX17048 tại địa chỉ 0x%02X (Mã lỗi: %d)!\n", MAX17048_ADDR, error);
-    
     }
 }
 
