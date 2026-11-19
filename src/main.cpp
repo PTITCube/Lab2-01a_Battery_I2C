@@ -42,7 +42,7 @@ void loop() {
     int16_t rawCrate = (int16_t)readRegister16(REG_CRATE);
     float crate = (float)rawCrate * 0.208f;
 
-    Serial.printf("[EPS] V: %.3f V | SOC: %.1f %% | Rate: %+.2f %%/h\n", voltage, soc, crate);
+    Serial.printf("EPS: V: %.3f V | SOC: %.1f %% | Rate: %+.2f %%/h\n", voltage, soc, crate);
 
     delay(2000);
 }
