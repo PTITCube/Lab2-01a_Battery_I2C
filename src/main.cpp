@@ -2,7 +2,10 @@
  * VÍ DỤ 2-1a: GIAO TIẾP VỚI IC ĐO DUNG LƯỢNG PIN MAX17048 QUA I2C THUẦN (WIRE.H)
  */
 #include <Arduino.h>
+#include <PTITCube.h>
 #include <Wire.h>
+
+PTIT_EPS eps;
 
 #define MAX17048_ADDR  0x36
 #define REG_VCELL      0x02
@@ -24,6 +27,10 @@ uint16_t readRegister16(uint8_t reg) {
 
 void setup() {
     Serial.begin(115200);
+
+    // Kích hoạt hạ áp cấp nguồn ngoại vi trên PCB vệ tinh qua thư viện EPS
+    eps.setBuckState(true);
+
     Wire.begin();
 }
 
